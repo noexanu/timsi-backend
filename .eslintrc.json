@@ -4,8 +4,8 @@
     "es2021": true
   },
   "extends": [
-    "airbnb",
-    "airbnb-typescript"
+    "airbnb/base",
+    "airbnb-typescript/base"
   ],
   "plugins": ["@typescript-eslint"],
   "parser": "@typescript-eslint/parser",

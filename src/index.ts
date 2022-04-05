@@ -1,9 +1,9 @@
-import express from 'express';
+import 'reflect-metadata';
+import dotenv from 'dotenv';
+import { createConnection } from 'typeorm';
+import server from 'server/server';
 
-const server = express();
+const config = dotenv.config().parsed!;
 
-server.get('/', (req, res) => {
-  res.send('Hello World');
-});
-
-server.listen(3000);
+createConnection();
+server.listen(config.SERVER_PORT!);
